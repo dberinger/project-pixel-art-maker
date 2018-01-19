@@ -5,7 +5,7 @@
 <head>
     <meta charset="utf-8">
     <link rel="stylesheet" href="styles.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pixel Art Maker</title>
 </head>
 
@@ -13,20 +13,20 @@
     <h1>Pixel Art Maker</h1>
     <p>Create new canvas (in squares):</p>
     <form action="" method="get">
-       <!-- USER INPUT -->
-        Width: 
+        <!-- USER INPUT -->
+        Width:
         <input id="width" type="number" name="width" min="1" max="40" value="10" required> 
-        Height: 
+        Height:
         <input id="height" type="number" name="height" min="1" max="40" value="10" required>
         <!-- BUTTONS -->
-        <input id="submit" type="button" value="Submit" onclick="myGrid()">
-        <button type="button" value="Delete" onclick="removeRow()">Del row</button>
-         <button type="button" value="Delete row" onclick="removeColumn()">Del col</button>         
-         <button type="button" value="Add" onclick="insertColumn()">Add column</button>
+        <input id="submit" type="submit" value="Submit">
+        <button type="button" value="Delete" onclick="removeRow()">- row</button>
+        <button type="button" value="Delete row" onclick="removeColumn()">- col</button>
+        <button type="button" value="Add" onclick="insertColumn()">+ col</button>
         <!-- COLOR PICKER -->
         <p>Pick a color:</p><br>
         <input id="color" type="color" name="color">
-        
+
         <p>Design Canvas:</p>
     </form>
     <table class="grid"></table>
