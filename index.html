@@ -4,7 +4,8 @@
 
 <head>
     <meta charset="utf-8">
-    <link rel="stylesheet" href="styles.css">    
+    <link rel="stylesheet" href="styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">    
     <title>Pixel Art Maker</title>
 </head>
 
@@ -14,14 +15,13 @@
     <form action="" method="get">
        <!-- USER INPUT -->
         Width: 
-        <input id="width" type="number" name="width" min="1" max="1000" value="10"> 
+        <input id="width" type="number" name="width" min="1" max="40" value="10" required> 
         Height: 
-        <input id="height" type="number" name="height" min="1" max="1000" value="10">
+        <input id="height" type="number" name="height" min="1" max="40" value="10" required>
         <!-- BUTTONS -->
         <input id="submit" type="button" value="Submit" onclick="myGrid()">
         <button type="button" value="Delete" onclick="removeRow()">Del row</button>
-         <button type="button" value="Delete row" onclick="removeColumn()">Del col</button>
-         <button type="button" value="Add" onclick="insertRow()">Add row</button>
+         <button type="button" value="Delete row" onclick="removeColumn()">Del col</button>         
          <button type="button" value="Add" onclick="insertColumn()">Add column</button>
         <!-- COLOR PICKER -->
         <p>Pick a color:</p><br>

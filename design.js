@@ -1,6 +1,8 @@
 /*jslint browser: true*/
 /*global $, jQuery*/
 
+//NOTE: no while loop since Forum Mentors said it's not a requirement
+
 const myTable = $(".grid");
 
 function addRows(table, n) {
@@ -9,15 +11,13 @@ function addRows(table, n) {
         table.append("<tr></tr>");
     }
 };
-/*
-function insertRow() {
-    $("table:last-child").append("<tr></tr>");
-};
+
+//TODO: add insertRow function to enable user to add a single row to the created grid (table)
 
 function insertColumn() {
     $("tr").append("<td></td>");
 };
-*/
+
 function addColumns(table, n) {
     for (var k = 0; k < n; k++) {
         table.find("tr").append("<td></td>");
