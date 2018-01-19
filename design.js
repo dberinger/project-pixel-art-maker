@@ -7,8 +7,16 @@ const myTable = $(".grid");
 
 function addRows(table, n) {
 
-    for (var i = 0; i < n; i++) {
+    var i = 0;
+    for (i; i < n; i++) {
         table.append("<tr></tr>");
+    }
+};
+
+function addColumns(table, n) {
+    var k = 0;
+    for (k; k < n; k++) {
+        table.find("tr").append("<td></td>");
     }
 };
 
@@ -16,12 +24,6 @@ function addRows(table, n) {
 
 function insertColumn() {
     $("tr").append("<td></td>");
-};
-
-function addColumns(table, n) {
-    for (var k = 0; k < n; k++) {
-        table.find("tr").append("<td></td>");
-    }
 };
 
 function removeRow() {
@@ -32,23 +34,19 @@ function removeColumn() {
     $("td:last-child").remove();
 };
 
-function clearTable() {
-    $("tr,td").remove();
-};
-
 function myGrid() {
     let width = parseInt($("#width").val());
     let height = parseInt($("#height").val());
 
-    clearTable();
+    myTable.empty();
     addRows(myTable, height);
-    addColumns(myTable, width);    
-
-    let cells = $("td");
-    for (var i = 0; i < cells.length; i++) {
-        cells[i].addEventListener("click", function () {
-            $(this).css("background-color", $("#color").val());
-        });
-    }
-    console.log(width + " " + height + " " + "cells: " + cells.length);
+    addColumns(myTable, width);
 };
+
+myTable.on("click", "td", function () {
+    $(this).css("background-color", $("#color").val());
+});
+
+myTable.on("dblclick", "td", function () {
+    this.css("background-color", "");
+});
