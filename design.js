@@ -45,12 +45,16 @@ function myGrid() {
 
 const myForm = document.querySelector("form");
 myForm.addEventListener('submit', function (e) {
-    // Prevent the page reload
     e.preventDefault();
     myGrid();
 });
 
 myTable.on("click", "td", function () {
+    $(this).css("background-color", $("#color").val());
+});
+
+//TODO: improve coloring while holding with mouse + doesn't work on mobile
+myTable.on("dragover", "td", function () {
     $(this).css("background-color", $("#color").val());
 });
 
