@@ -1,3 +1,5 @@
+/*TODO: move content to left and canvas right*/
+
 *{
     margin: 0;
     padding: 0;
@@ -6,7 +8,10 @@
 body {
     width: 100%;
     height: auto;
-    
+    font-family: "VT323", cursive;
+    font-size: 1.2em;
+    padding: 0.5em;
+    text-align: center;
 }
 table,
 tr,
@@ -18,4 +23,31 @@ td
 
 table {
     border-collapse: collapse;
+    margin: 1em auto;
+    background-color: white;
+
+}
+
+h1 {
+    font-family: "Press Start 2P", cursive;
+    font-size: 1.5em;
+    padding: 1em;
+}
+
+#submit,
+button {
+    font-family: "VT323", cursive;
+    font-size: 1em;
+}
+
+.userInput {
+    margin: 1em;
+}
+
+.group-buttons {
+    margin: 1em;
+}
+
+.color-picker p {
+    margin-top: 1em;
 }

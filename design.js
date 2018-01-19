@@ -43,6 +43,8 @@ function myGrid() {
     addColumns(myTable, width);
 };
 
+//TODO: show extra buttons only after submitting
+
 const myForm = document.querySelector("form");
 myForm.addEventListener('submit', function (e) {
     e.preventDefault();
