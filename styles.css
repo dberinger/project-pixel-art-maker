@@ -1,5 +1,3 @@
-/*TODO: move content to left and canvas right*/
-
 * {
     margin: 0;
     padding: 0;
@@ -15,18 +13,7 @@ body {
     color: white;
 }
 
-table,
-tr,
-td {
-    border: solid lightgrey 1px;
-    padding: 0.5em;
-}
-
-.grid {
-    border-collapse: collapse;
-    margin: 1em auto;
-    background-color: white;
-}
+/*    PIXEL ART MAKER TITLE     */
 
 h1 {
     font-family: "Press Start 2P", cursive;
@@ -37,24 +24,18 @@ h1 {
     text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #00BFFF, 0 0 10px #00BFFF, 0 0 10px #00BFFF, 0 0 10px #00BFFF, 0 0 15px #00BFFF;
     text-transform: uppercase;
     text-align: center;
-
 }
 
-#submit,
-button,
-#color{
-    font-family: "VT323", cursive;
-    font-size: 1em;
-    background-color: black;
-    color: white;
-    text-transform: uppercase;
-    border: 0.1em solid #00BFFF;
-    border-radius: 0.2em;
-    padding: 0.1em;
-}
+/*    USER INPUT AND COLOR PICKER     */
 
 .userInput {
     margin: 1em;
+}
+
+input[type=number] {
+    font-family: "VT323", cursive;
+    font-size: 1em;
+    text-align: center;
 }
 
 .group-buttons {
@@ -69,7 +50,38 @@ button,
     margin-bottom: 1em;
 }
 
-.blue-border {
+#submit,
+button,
+#color {
+    font-family: "VT323", cursive;
+    font-size: 1em;
+    background-color: black;
+    color: white;
+    text-transform: uppercase;
+    padding: 0.1em;
+}
+
+#submit,
+button,
+#color,
+table,
+input[type=number] {
+
     border: 0.1em solid #00BFFF;
     border-radius: 0.2em;
+}
+
+/*     TABLE     */
+
+table,
+tr,
+td {
+    border: solid lightgrey 1px;
+    padding: 0.5em;
+}
+
+.grid {
+    border-collapse: collapse;
+    margin: 1em auto;
+    background-color: white;
 }
