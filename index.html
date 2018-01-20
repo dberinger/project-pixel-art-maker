@@ -12,30 +12,32 @@
 
 <body>
     <h1>Pixel Art Maker</h1>
-    <p>Create new canvas (in squares):</p>
-    <form action="" method="get">
-        <!-- USER INPUT -->
-        <div class="userInput">
-            Width:
-            <input id="width" type="number" name="width" min="1" max="40" value="10" required>
-            Height:
-            <input id="height" type="number" name="height" min="1" max="40" value="10" required>
-            <!-- BUTTONS -->
-            <input id="submit" type="submit" value="Submit">
-        </div>
-        <div class="group-buttons">
-            <button type="button" value="Delete" onclick="removeRow()">- row</button>
-            <button type="button" value="Delete row" onclick="removeColumn()">- col</button>
-            <button type="button" value="Add" onclick="insertColumn()">+ col</button>
-        </div>
-        <!-- COLOR PICKER -->
-        <div class="color-picker">
-            <p>Pick a color:</p><br>
-            <input id="color" type="color" name="color">
+<aside>
 
-            <p>Design Canvas:</p>
-        </div>
-    </form>
+        <form action="" method="get">
+            <p>Create new canvas (in squares):</p>
+            <!-- USER INPUT -->
+            <div class="userInput">
+                Width:
+                <input id="width" type="number" name="width" min="1" max="40" value="10" required> Height:
+                <input id="height" type="number" name="height" min="1" max="40" value="10" required>
+                <!-- BUTTONS -->
+                <input id="submit" type="submit" value="Submit">
+            </div>
+            <div class="group-buttons">
+                <button type="button" value="Delete" onclick="removeRow()">- row</button>
+                <button type="button" value="Delete row" onclick="removeColumn()">- col</button>
+                <button type="button" value="Add" onclick="insertColumn()">+ col</button>
+            </div>
+            <!-- COLOR PICKER -->
+            <div class="color-picker">
+                <p>Pick a color:</p><br>
+                <input id="color" type="color" name="color">
+            </div>
+        </form>
+</aside>
+
+    <p>Design Canvas:</p>
     <table class="grid"></table>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="design.js"></script>
