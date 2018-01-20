@@ -1,6 +1,6 @@
 /*TODO: move content to left and canvas right*/
 
-*{
+* {
     margin: 0;
     padding: 0;
 }
@@ -10,12 +10,14 @@ body {
     height: auto;
     font-family: "VT323", cursive;
     font-size: 1.2em;
-    padding: 0.5em;
+    text-align: center;
+    background-color: black;
+    color: white;
 }
+
 table,
 tr,
-td
-{
+td {
     border: solid lightgrey 1px;
     padding: 0.5em;
 }
@@ -24,8 +26,6 @@ table {
     border-collapse: collapse;
     margin: 1em auto;
     background-color: white;
-    float: right;
-
 }
 
 h1 {
@@ -56,4 +56,16 @@ button {
 
 .color-picker p {
     margin-top: 1em;
+}
+
+#color {
+    margin-bottom: 1em;
+}
+
+.rainbow {
+
+    color: -webkit-linear-gradient(left, orange , yellow, green, cyan, blue, violet); /* For Safari 5.1 to 6.0 */
+    color: -o-linear-gradient(right, orange, yellow, green, cyan, blue, violet); /* For Opera 11.1 to 12.0 */
+    color: -moz-linear-gradient(right, orange, yellow, green, cyan, blue, violet); /* For Firefox 3.6 to 15 */
+   color: linear-gradient(to right, orange , yellow, green, cyan, blue, violet); /* Standard syntax (must be last) */
 }
