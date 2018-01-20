@@ -13,7 +13,7 @@ function addRows(table, n) {
     }
 };
 
-function addColumns(table, n) {
+function addCells(table, n) {
     var k = 0;
     for (k; k < n; k++) {
         table.find("tr").append("<td></td>");
@@ -21,6 +21,11 @@ function addColumns(table, n) {
 };
 
 //TODO: add insertRow function to enable user to add a single row to the created grid (table)
+
+function insertRow() {
+    addRows(myTable,1);
+    addCells(myTable,parseInt(1));
+};
 
 function insertColumn() {
     $("tr").append("<td></td>");
@@ -40,7 +45,7 @@ function myGrid() {
 
     myTable.empty();
     addRows(myTable, height);
-    addColumns(myTable, width);
+    addCells(myTable, width);
 };
 
 //TODO: show extra buttons only after submitting
