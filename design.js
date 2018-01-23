@@ -16,7 +16,7 @@ function addRows(table, n) {
 function addCells(table, n) {
     var k = 0;
     for (k; k < n; k++) {
-        table.find("tr").append("<td></td>");
+        $("tr").append("<td></td>");
     }
 };
 
@@ -24,7 +24,7 @@ function addCells(table, n) {
 
 function insertRow() {
     addRows(myTable,1);
-    addCells(myTable,parseInt(1));
+    addCells(myTable,parseInt(10));
 };
 
 function insertColumn() {
