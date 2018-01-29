@@ -81,7 +81,7 @@ td {
 }
 
 .grid {
-    border-collapse: collapse;
     margin: 1em auto;
     background-color: white;
+    overflow: auto;
 }

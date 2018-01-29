@@ -2,6 +2,10 @@
 /*global $, jQuery*/
 //NOTE: no while loop since Forum Mentors said it's not a requirement
 //using .append in loops slows down performance tremendously from what I've read :x
+/*TODO:
+    * input boxes type number should dynamically update as user add/deletes rows/columns
+    * extra 4 buttons for adjusting grid must become hidden/disabled if grid is < 1x1
+*/
 
 const myTable = $(".grid");
 const myForm = $("form");
@@ -19,19 +23,14 @@ buttons.hide();
  */
 function insertRow(tableID) {
     tableID.each(function () {
-        var $table = $(this);
-        // Number of tds in the last table row
-        var n = $("tr:last td", this).length;
-        var tds = "<tr>";
+        //Number of cells in the last row
+        let n = $("tr:last td").length;
+        let rowStr = "<tr>";
         for (var i = 0; i < n; i++) {
-            tds += "<td></td>";
+            rowStr += "<td></td>";
         }
-        tds += "</tr>";
-        if ($("tbody", this).length > 0) {
-            $("tbody", this).append(tds);
-        } else {
-            $(this).append(tds);
-        }
+        rowStr += "</tr>";
+        tableID.append(rowStr);
     });
 };
 /**
