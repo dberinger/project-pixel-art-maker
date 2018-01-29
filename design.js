@@ -1,10 +1,10 @@
 /*jslint browser: true*/
 /*global $, jQuery*/
-//NOTE: no while loop since Forum Mentors said it's not a requirement;
-// using .append in loops slows down performance tremendously from what I've read :x
+//NOTE: no while loop since Forum Mentors said it's not a requirement
+//using .append in loops slows down performance tremendously from what I've read :x
 
 const myTable = $(".grid");
-const myForm = document.querySelector("form");
+const myForm = $("form");
 const buttons = $(".buttons");
 //boolean used in drawing functionalities
 let isHolding;
@@ -13,6 +13,10 @@ buttons.hide();
 
 /*  GRID CREATION FUNCTIONS     */
 
+/**
+ * @description Inserts a single row into a specified table
+ * @param {Object} tableID - ID of the desired table
+ */
 function insertRow(tableID) {
     tableID.each(function () {
         var $table = $(this);
@@ -30,19 +34,33 @@ function insertRow(tableID) {
         }
     });
 };
-
+/**
+ * @description Inserts a single column into a specified table
+ * @param {Object} tableID - ID of the desired table
+ */
 function insertColumn(tableID) {
     tableID.find("tr").append("<td></td>");
 };
-
+/**
+ * @description Removes last column from a specified table
+ * @param {Object} tableID - ID of the desired table
+ */
 function removeRow(tableID) {
     tableID.find("tr:last-child").remove();
 };
-
+/**
+ * @description Removes last row from a specified table
+ * @param {Object} tableID - ID of the desired table
+ */
 function removeColumn(tableID) {
     tableID.find("td:last-child").remove();
 };
-
+/**
+ * @description Creates a String to be appended to a table to create a table lol
+ * @param {number} height - number of rows
+ * @param {nubmer} width - number of cells in a row
+ * @returns {string} tableStr - final String to create a table
+ */
 function createTableStr(height, width) {
     let tableStr = "";
     for (var i = 0; i < height; i++) {
@@ -54,7 +72,9 @@ function createTableStr(height, width) {
     }
     return tableStr;
 }
-
+/**
+ * @description Creates a table sized dynamically by the user input
+ */
 function myGrid() {
     let width = parseInt($("#width").val());
     let height = parseInt($("#height").val());
@@ -64,7 +84,7 @@ function myGrid() {
 
 /*   SUBMIT EVENT    */
 
-myForm.addEventListener("submit", function (e) {
+myForm.on("submit", function (e) {
     //prevent page from refreshing
     e.preventDefault();
     //invoke grid creating function
