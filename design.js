@@ -106,6 +106,9 @@ $("#add-col-btn").click(function () {
 $("#del-col-btn").click(function () {
     removeColumn(myTable);
 });
+$("#clear-btn").click(function (){
+    $("td").css("background-color","");
+})
 
 /*   DRAWING FUNCTIONALITIES     */
 

@@ -64,7 +64,6 @@ button,
 #submit,
 button,
 #color,
-table,
 input[type=number] {
 
     border: 0.1em solid #00BFFF;
@@ -73,15 +72,20 @@ input[type=number] {
 
 /*     TABLE     */
 
+.overflow {
+    overflow-x: auto;
+}
+
 table,
 tr,
 td {
-    border: solid lightgrey 1px;
-    padding: 0.5em;
+    border: solid grey 1px;
+    padding: 0.8em;
 }
 
 .grid {
+    border-collapse: collapse;
     margin: 1em auto;
     background-color: white;
-    overflow: auto;
+    border: 1em solid #00BFFF;
 }
