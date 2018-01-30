@@ -2,6 +2,7 @@
 /*global $, jQuery*/
 //NOTE: no while loop since Forum Mentors said it's not a requirement
 //using .append in loops slows down performance tremendously from what I've read :x
+
 /*TODO:
     * input boxes type number should dynamically update as user add/deletes rows/columns
     * extra 4 buttons for adjusting grid must become hidden/disabled if grid is < 1x1
@@ -33,6 +34,7 @@ function insertRow(tableID) {
         tableID.append(rowStr);
     });
 };
+
 /**
  * @description Inserts a single column into a specified table
  * @param {Object} tableID - ID of the desired table
@@ -40,6 +42,7 @@ function insertRow(tableID) {
 function insertColumn(tableID) {
     tableID.find("tr").append("<td></td>");
 };
+
 /**
  * @description Removes last column from a specified table
  * @param {Object} tableID - ID of the desired table
@@ -47,6 +50,7 @@ function insertColumn(tableID) {
 function removeRow(tableID) {
     tableID.find("tr:last-child").remove();
 };
+
 /**
  * @description Removes last row from a specified table
  * @param {Object} tableID - ID of the desired table
@@ -54,6 +58,7 @@ function removeRow(tableID) {
 function removeColumn(tableID) {
     tableID.find("td:last-child").remove();
 };
+
 /**
  * @description Creates a String to be appended to a table to create a table lol
  * @param {number} height - number of rows
@@ -71,6 +76,7 @@ function createTableStr(height, width) {
     }
     return tableStr;
 }
+
 /**
  * @description Creates a table sized dynamically by the user input
  */
@@ -99,7 +105,7 @@ $("#add-row-btn").click(function () {
 });
 $("#del-row-btn").click(function () {
     removeRow(myTable);
-})
+});
 $("#add-col-btn").click(function () {
     insertColumn(myTable);
 });
@@ -108,7 +114,7 @@ $("#del-col-btn").click(function () {
 });
 $("#clear-btn").click(function (){
     $("td").css("background-color","");
-})
+});
 
 /*   DRAWING FUNCTIONALITIES     */
 
